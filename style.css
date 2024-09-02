@@ -1,0 +1,357 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Mono", monospace;
+}
+
+.main {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: black;
+}
+
+.loader {
+  width: 100%;
+  min-height: 100vh;
+  position: absolute;
+  background: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.Video2 {
+  display: none;
+}
+
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  position: absolute;
+  z-index: 10;
+}
+
+
+.main .image-container {
+  padding: 10px;
+}
+
+.main .image-container .image {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main .image-container .image img {
+  width: 350px;
+  align-items: center;
+
+
+}
+
+.main .image-container h1 {
+  color: #828282b8;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 40px;
+}
+
+.main .image-container p {
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: cursive;
+  font-size: 20px;
+  color: #ffffffb0;
+
+}
+
+
+.main .input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40vw;
+  height: 50px;
+  border-radius: 10px;
+  border: solid white 2px;
+  background: #ffffff12;
+
+}
+
+.main .input .talk {
+  border-radius: 10px;
+  background: transparent;
+  outline: none;
+  border: none;
+  width: 49vw;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+
+
+.main .input .content {
+  color: #ccc0c0b8;
+  font-size: 15px;
+  margin-right: 20px;
+  position: absolute;
+  top: 84vh;
+  z-index: -11;
+
+
+}
+
+
+/* mobile css */
+
+
+.box1 {
+  width: 59vw;
+  height: 35vh;
+  border: solid rgb(5 39 255)2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  animation: box1 5s infinite;
+  display: none;
+  z-index: 100;
+}
+
+.box2 {
+  width: 39vw;
+  height: 23vh;
+  border-radius: 100%;
+  border: solid white 3px;
+  background-color: transparent;
+  color: white;
+  font-size: 40px;
+  position: absolute;
+  display: none;
+
+
+}
+
+
+
+@keyframes box1 {
+
+  0% {
+    width: 39vw;
+    height: 23vh;
+    border-radius: 100%;
+    border: solid white 5px;
+
+  }
+
+
+  100% {
+    width: 59vw;
+    height: 35vh;
+    border: solid transparent 5px;
+
+  }
+
+
+
+}
+
+.box2:focus {
+  width: 59vw;
+  height: 35vh;
+  background-color: #000000;
+  border: solid rgb(1, 255, 153) 3px;
+  transition: .50s;
+  background-image: url(./voice_line.gif);
+  background-size: 250px;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  color: rgb(1, 255, 153);
+
+
+}
+
+
+.content2 {
+  color: rgb(1, 255, 153);
+  font-family: cursive;
+  font-weight: 100;
+  display: none;
+}
+
+.content-box{
+  width: 80vw;
+  height: 9vh;
+  position: absolute;
+  top: 69vh;
+  display: flex;
+  justify-content: center;
+  display: none;
+}
+
+
+.m-heding {
+
+  color: #ffffffbf;
+  position: absolute;
+  top: 6vh;
+  font-family: math;
+  font-weight: bolder;
+  font-size: 18px;
+  border: solid 2px rgb(255 255 255 / 26%);
+  padding: 16px;
+  border-radius: 1vh;
+  z-index: 100;
+  display: none;
+}
+
+.refresh {
+  position: absolute;
+  top: 84vh;
+  width: 54vw;
+  padding: 15px;
+  font-size: 18px;
+  font-family: math;
+  background-color: rgb(114 114 114 / 37%);
+  border: none;
+  border-radius: 6px;
+  color: #ffffffbf;
+  z-index: 100;
+  display: none;
+}
+
+.refresh:active {
+
+  background-color: rgb(1, 255, 153);
+
+}
+
+
+
+
+
+
+/* media-query  */
+
+/* Mobile  */
+
+@media screen and (min-width:320px) and (max-width:767px) {
+
+  .main .image-container .image img {
+    display: none;
+  }
+
+  .main .input {
+    display: none;
+  }
+
+
+
+  .main .image-container {
+    display: none;
+  }
+
+  .Video2 {
+    width: 180%;
+    position: absolute;
+    transform: rotate(90deg);
+    top: 48px;
+    right: -126px;
+  }
+
+
+
+
+  .box1 {
+    display: flex;
+  }
+
+  .box2 {
+
+    display: block;
+  }
+
+  .content2 {
+    display: block;
+  }
+
+  .content-box{
+    display: flex;
+  }
+  .m-heding {
+    display: block;
+  }
+
+  .refresh {
+    display: block;
+
+  }
+
+}
+
+
+/* Tablet  */
+
+@media screen and (min-width:768px) and (max-width:992px) {
+
+  .main .input {
+    width: 64vw;
+  }
+
+  .main .input .content {
+    top: 87vh;
+  }
+
+  .main .image-container p {
+    margin-bottom: 12px;
+  }
+
+  .Video2 {
+    position: absolute;
+    width: 117%;
+    top: -5px;
+    right: 0px;
+  }
+
+
+}
+
+
+/* Leptop  */
+
+@media screen and (min-width:993px) and (max-width:1024px) {
+
+  .main .input {
+    width: 49vw;
+  }
+
+  .main .image-container p {
+    margin-bottom: 12px;
+  }
+
+  .Video2 {
+    top: -85px;
+  }
+
+  .main .input .content {
+    top: 87vh;
+  }
+
+}
