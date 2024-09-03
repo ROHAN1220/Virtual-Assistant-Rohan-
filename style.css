@@ -1,0 +1,399 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Mono", monospace;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./YE6OJA.gif);
+  background-repeat: repeat;
+  background-size: 143px;
+}
+
+
+.loader {
+  width: 100%;
+  min-height: 100vh;
+  position: absolute;
+  background: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.Video2 {
+  display: none;
+}
+
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  position: absolute;
+  z-index: 10;
+}
+
+
+.image-container {
+  padding: 10px;
+}
+
+.image-container .image {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-container .image img {
+  width: 350px;
+  align-items: center;
+
+
+}
+
+.image-container h1 {
+  color: #828282;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 40px;
+}
+
+.image-container p {
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: cursive;
+  font-size: 20px;
+  color: #ffffffb0;
+
+}
+
+
+.input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40vw;
+  height: 50px;
+  border-radius: 10px;
+  border: solid #677474 2px;
+  background: #ffffff12;
+
+}
+
+.input .talk {
+  border-radius: 10px;
+  background: transparent;
+  outline: none;
+  border: none;
+  width: 49vw;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+
+
+.input .content {
+  color: #919191;
+  font-size: 15px;
+  margin-right: 20px;
+  position: absolute;
+  top: 84vh;
+  z-index: -11;
+
+
+}
+
+
+/* mobile css */
+
+
+.box1 {
+
+  width: 42vw;
+  height: 21vh;
+  border: solid rgb(5 39 255)2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  animation: box1 5s infinite;
+  display: none;
+  z-index: 100;
+}
+
+.box2 {
+
+  width: 42vw;
+  height: 21vh;
+  border-radius: 100%;
+  border: solid white 3px;
+  background-color: transparent;
+  color: white;
+  font-size: 40px;
+  position: absolute;
+  display: none;
+
+
+}
+
+
+
+@keyframes box1 {
+
+  0% {
+    width: 42vw;
+    height: 21vh;
+    border-radius: 100%;
+    border: solid white 5px;
+
+  }
+
+  50% {
+
+    border: solid white 3px;
+  }
+
+
+
+  100% {
+    width: 57vw;
+    height: 28vh;
+    border: solid transparent 5px;
+
+  }
+
+
+
+}
+
+.box2:focus {
+  width: 57vw;
+  height: 28vh;
+  background-color: #000000;
+  border: solid rgb(1, 255, 153) 3px;
+  transition: .50s;
+  background-image: url(./voice_line.gif);
+  background-size: 250px;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  color: rgb(1, 255, 153);
+
+
+}
+
+
+.content2 {
+  color: rgb(1, 255, 153);
+  color: rgb(1, 255, 153);
+  font-weight: bolder;
+  font-size: 2rem;
+  display: none;
+}
+
+.content-box {
+  width: 80vw;
+  height: 9vh;
+  position: absolute;
+  top: 69vh;
+  display: flex;
+  justify-content: center;
+  display: none;
+}
+
+
+.heding {
+  color: white;
+  position: absolute;
+  top: 1vh;
+  font-size: 1.25rem;
+  font-weight: bolder;
+  display: none;
+
+}
+
+
+.refresh {
+  position: absolute;
+  top: 84vh;
+  width: 54vw;
+  padding: 15px;
+  font-size: 1.30rem;
+  font-weight: bolder;
+  background-color: rgb(114 114 114 / 37%);
+  border: none;
+  border-radius: 6px;
+  color: #ffffffbf;
+  z-index: 100;
+  display: none;
+}
+
+.refresh:active {
+
+  background-color: rgb(1, 255, 153);
+
+}
+
+.inform {
+  color: transparent;
+  position: absolute;
+  top: 64vh;
+  animation: inform 3s;
+  display:none;
+}
+
+@keyframes inform {
+  to {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+    color: rgb(1, 255, 153);
+  }
+
+  
+
+
+  
+
+
+}
+
+
+/* media-query  */
+
+/* Mobile  */
+
+@media screen and (min-width:320px) and (max-width:767px) {
+
+  body {
+    background-size: 122px;
+
+  }
+
+
+  .image-container .image img {
+    display: none;
+  }
+
+  .input {
+    display: none;
+  }
+
+
+
+  .image-container {
+    display: none;
+  }
+
+  .Video2 {
+    width: 180%;
+    position: absolute;
+    transform: rotate(90deg);
+    top: 48px;
+    right: -126px;
+  }
+
+
+
+
+  .box1 {
+    display: flex;
+  }
+
+  .box2 {
+
+    display: block;
+  }
+
+  .content2 {
+    display: block;
+  }
+
+  .content-box {
+    display: flex;
+  }
+
+  .heding {
+    display: block;
+  }
+
+  .refresh {
+    display: block;
+
+  }
+  
+
+  .inform{
+    display: block;
+  }
+
+
+
+}
+
+
+/* Tablet  */
+
+@media screen and (min-width:768px) and (max-width:992px) {
+
+  .main .input {
+    width: 64vw;
+  }
+
+  .main .input .content {
+    top: 87vh;
+  }
+
+  .main .image-container p {
+    margin-bottom: 12px;
+  }
+
+  .Video2 {
+    position: absolute;
+    width: 117%;
+    top: -5px;
+    right: 0px;
+  }
+
+
+}
+
+
+/* Leptop  */
+
+@media screen and (min-width:993px) and (max-width:1024px) {
+
+  .main .input {
+    width: 49vw;
+  }
+
+  .main .image-container p {
+    margin-bottom: 12px;
+  }
+
+  .Video2 {
+    top: -85px;
+  }
+
+  .main .input .content {
+    top: 87vh;
+  }
+
+}
